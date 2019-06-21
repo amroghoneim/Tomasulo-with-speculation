@@ -177,7 +177,7 @@ bool check_empty_IB(vector<Instruction_Buffer> &inst_buffer) {
 	}
 	return false;
 }
-void Fetch(vector<Instruction_Buffer> &inst_buffer, vector<Reorder_Buffer>& ROB, vector<Reservation_Station>& RS) { // elmafroud sa7
+void Fetch(vector<Instruction_Buffer> &inst_buffer, vector<Reorder_Buffer>& ROB, vector<Reservation_Station>& RS) {
 	if (address < instructions.size()) {
 		instructions[address].is_committed = false;
 		instruction_count++;
@@ -209,7 +209,7 @@ void Fetch(vector<Instruction_Buffer> &inst_buffer, vector<Reorder_Buffer>& ROB,
 }
 
 
-void issue(vector<Instruction_Buffer>& inst_buffer, vector<Reorder_Buffer>& ROB, Reservation_Station rs[], Registers rf[]) //elmafroud sa7
+void issue(vector<Instruction_Buffer>& inst_buffer, vector<Reorder_Buffer>& ROB, Reservation_Station rs[], Registers rf[])
 {
 	int issue_count = 2, int inst_buffer_index;
 	string opcode;
@@ -887,8 +887,8 @@ void commit(vector<Reorder_Buffer>& ROB, Registers regfile[]) {
 			ROB[i].Dest = -1;
 			ROB[i].Type = "";
 			ROB[i].Value = -1;
-			ROB[(i + 1) % 6].head = true; // is this correct?
-			instructions[address].is_committed = true; // when do we use this
+			ROB[(i + 1) % 6].head = true;
+			instructions[address].is_committed = true;
 			if (commit_count++ == 2) break;
 		}
 	}
