@@ -7,3 +7,18 @@ Tomasulo’s algorithm with speculation has five main stages where these stages 
 
 I also have a main driver function that combines all these functions, initializes all data types, where it initializes the data structures that represent the instruction buffer, reorder buffer, reservation stations , memory and register file. This function is also responsible for a cycle by cycle output of results where it shows all changes happening in the mentioned most data structures above to allow for a better analysis of the results. It then outputs the total number of clock cycles, IPC and branch prediction if there is any.
 
+# User Guide
+The program begins by asking the user for the text file name. The user must add the complete data path if the text file is not in the project folder.
+Ex: “filname.txt” if included in project folder.
+Ex: “Users:/project/filename.txt” if not included in project folder.
+
+The input instructions must follow the following format:  
+The Opcode is lowercase  
+There must be a space between the opcode and rd  
+No spaces should be present in the rest of the instruction  
+
+example:  
+The user is then asked to input the starting address of the program.  
+The program then asks the user to  input the address and data respectively.  
+Please note that the user must input -1 when the program asks for an address to stop receiving input.  
+The program then executes!  
