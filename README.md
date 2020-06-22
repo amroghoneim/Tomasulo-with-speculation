@@ -13,11 +13,13 @@ Ex: “filname.txt” if included in project folder.
 Ex: “Users:/project/filename.txt” if not included in project folder.
 
 The input instructions must follow the following format:  
-The Opcode is lowercase  
-There must be a space between the opcode and rd  
-No spaces should be present in the rest of the instruction  
 
-example:  
+*The Opcode is lowercase*  
+
+*There must be a space between the opcode and rd*  
+
+*No spaces should be present in the rest of the instruction*  
+
 The user is then asked to input the starting address of the program.  
 The program then asks the user to  input the address and data respectively.  
 Please note that the user must input -1 when the program asks for an address to stop receiving input.  
